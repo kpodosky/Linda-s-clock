@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet" />
+    <style>
+        *,
+        *:after,
+        *:before {
+            font-family: 'Montserrat', 'Gothic A1', sans-serif;
+        }
+
+        body {
+            padding: 50px;
+            background-color: #ffffff;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+        .company-name {
+            color: #060E42;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .receipt-title {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: left;
+        }
+
+        th {
+            /* background-color: #f2f2f2; */
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="header">
+        <div class="inline-block">
+            <img src="https://res.cloudinary.com/dlbjdsad5/image/upload/v1713114178/profileDocument/dezjshbyhd0ql1qnzbzt.jpg"
+                 alt="nididrive logo" width="auto"/>
+        </div>
+    </div>
+    <div class="receipt-title">
+        <h3>Transaction Receipt</h3>
+        <p>Generated from CPay on {{date}}</p>
+    </div>
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Transaction Amount</td>
+            <td>{{amount}}</td>
+        </tr>
+        <tr>
+            <td>Transaction Date</td>
+            <td>{{date}}</td>
+        </tr>
+        <tr>
+            <td>Transaction Type</td>
+            <td>{{type}}</td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>{{category}}</td>
+        </tr>
+        <tr>
+            <td>Payment Type</td>
+            <td>{{paymentType}}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{description}}</td>
+        </tr>
+        <tr>
+            <td>Transaction Reference</td>
+            <td>{{transactionId}}</td>
+        </tr>
+        <tr>
+            <td>Transaction Status</td>
+            <td>{{status}}</td>
+        </tr>
+    </table>
+    <footer>
+        <p>If you have any questions or would like more information contact help@cpay.com</p>
+        <!-- <p class="millions">Millions of people moving to new countries use Nididrive for accessing financial services like bank accounts, debit and credit cards.</p> -->
+    </footer>
+</main>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function getFormattedDate() {
+            const currentDate = new Date();
+            const options = {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                timeZoneName: "short",
+            };
+            return currentDate.toLocaleDateString("en-US", options);
+        }
+
+        // Update the generationDate element with the formatted date and time
+        const generationDateElement = document.querySelector(".receipt-title p");
+        if (generationDateElement) {
+            generationDateElement.textContent = "Generated from Cpay on " + getFormattedDate();
+        }
+    });
+</script>
+</body>
+</html>

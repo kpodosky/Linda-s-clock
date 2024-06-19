@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet"/>
+
+    <style>
+      *,
+      *:after,
+      *:before {
+        font-family: 'Montserrat', 'Gothic A1', sans-serif;
+      }
+      body {
+        padding: 50px;
+        background-color: #ffffff;
+        margin: 0 auto;
+      }
+      .header{
+        display: flex;
+        align-items: center;
+      }
+      .company-name{
+        color: #060E42;
+        font-weight: 500;
+        margin-left: 10px;
+      }
+      .receipt-title{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .parent {
+            display: flex;
+            margin: 15px 0px;
+            border-bottom: 1px solid rgba(103, 169, 72, 0.6); /* Added width and style */
+            justify-content: space-between;
+        }
+
+        .child1 {
+            flex: 1;
+            padding: 15px;
+            font-weight: 500;
+            /* background-color: rgba(103, 169, 72, 0.2); */
+        }
+
+        .child2 {
+            flex: 2;
+            background-color: #ffffff;
+            padding: 15px; 
+        }
+        .millions{
+            margin-top: 40px;
+            font-size: 12px;
+        }
+              
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <div class="inline-block">
+          <img
+            src="https://res.cloudinary.com/dlbjdsad5/image/upload/v1698225080/nidilogo2_uzfavq.svg"
+            alt="nididrive logo"
+            width="auto"
+          />
+        </div>
+        <div class="company-name">Nididrive</div>
+      </div>
+      <div class="receipt-title">
+        <h3 >Transaction Receipt</h3>
+        <p>Generated from Nididrive Technologies on {{date}}</p>
+      </div>
+      <div class="receipt-text">
+       
+        <div class="parent">
+            <div class="child1">Transaction Amount
+            </div>
+            <div class="child2">{{this.amount}}
+            </div>
+        </div>
+        <div class="parent">
+            <div class="child1">Transaction Date
+            </div>
+            <div class="child2">{{this.date}}
+            </div>
+        </div>
+        <div class="parent">
+            <div class="child1">Transaction Type
+            </div>
+            <div class="child2">{{this.type}}
+            </div>
+        </div>
+        <div class="parent">
+            <div class="child1">Category
+            </div>
+            <div class="child2">{{this.category}}
+            </div>
+        </div>
+        <div class="parent">
+            <div class="child1">Payment Type
+            </div>
+            <div class="child2">{{this.paymentType}}
+            </div>
+        </div>
+        <div class="parent">
+            <div class="child1">Description
+            </div>
+            <div class="child2">{{this.description}}
+            </div>
+        </div>
+        <div class="parent">
+            <div class="child1">Transaction Reference
+            </div>
+            <div class="child2">{{this.transactionId}}
+            </div>
+        </div>
+        <div class="parent">
+            <div class="child1">Transaction Status
+            </div>
+            <div class="child2">{{this.status}}
+            </div>
+        </div>
+
+      </div>
+      <footer >
+        <p>If you have any questions or would like more information contact help@nididrive.com</p>
+        {{!-- <p class="millions">Millions of people moving to new countries use Nididrive for accessing financial services like bank accounts, debit and credit cards.</p> --}}
+      </footer>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function getFormattedDate() {
+          const currentDate = new Date();
+          const options = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            timeZoneName: "short",
+          };
+          return currentDate.toLocaleDateString("en-US", options);
+        }
+
+        // Update the generationDate element with the formatted date and time
+        const generationDateElement = document.querySelector(".receipt-title p");
+        if (generationDateElement) {
+          generationDateElement.textContent = "Generated from nididrive on " + getFormattedDate();
+        }
+      });
+    </script>
+  </body>
+</html>

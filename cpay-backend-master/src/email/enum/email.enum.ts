@@ -1,0 +1,15 @@
+export enum EmailTemplatesEnum {
+  'welcome' = 'Welcome',
+  'otp' = 'otp',
+  'send_otp' = 'send_otp',
+  'password_reset' = 'password_reset',
+  'business_creation' = 'business_creation',
+  'login_alert' = 'login_alert',
+  'waitlist' = 'waitlist',
+  'general' = 'general',
+  'invite' = 'invite',
+  'payment_link_transaction' = 'payment_link_transaction',
+  'email_verification' = 'email_verification',
+  'admin_invite' = 'admin_invite',
+  'contact_sales' = 'contact_sales',
+}

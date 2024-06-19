@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;600;700&family=Inter:wght@100..900&family=Montserrat:wght@800&family=Work+Sans:wght@600&display=swap" rel="stylesheet">
+    <title>{{preview}}</title>
+    <style>
+      @media only screen and (max-width: 968px) {
+        .wrapper {
+            color: #333333;
+           /* padding: 10px; Adjust the padding to your desired value */
+          height: auto; /* You may also want to remove fixed height for smaller screens */
+        }
+      }
+
+    .logo{
+        width: 200px;
+        margin-bottom: 50px;
+    }
+    .with-dot::before {
+        content: '•'; /* Bullet character */
+        margin: 0 8px; /* Adjust spacing as needed */
+        color: #D9D9D9;
+        text-decoration: none !important;
+    }
+     @media (max-width: 520px) {
+      .main{
+        padding: 10px !important;
+      }
+      .logo{
+        width: 120px;
+        margin-bottom: 30px;
+    	}
+     }
+    </style>
+  </head>
+​
+  <body style="
+      font-family: 'Inter' sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    ">
+    <span class="preheader" style="
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+        width: 0;
+      ">{{preview}}</span>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body" style="
+        border-collapse: separate;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        background-color: #f6f6f6;
+        width: 100%;
+      " width="100%">
+      <tr>
+        <td style="font-family: Inter; font-size: 14px; vertical-align: top" valign="top">
+          &nbsp;
+        </td>
+        <td class="container" style="
+            font-family: Inter;
+            font-size: 14px;
+            vertical-align: top;
+            display: block;
+            max-width: 720px;
+            width: 720px;
+            margin: 30px auto;
+          " width="720" valign="top">
+          <div class="content" style="
+              box-sizing: border-box;
+              display: block;
+              margin: 0 auto;
+              max-width: 720px;
+              /* padding: 10px; */
+            ">
+            <!-- START CENTERED WHITE CONTAINER -->
+            <table role="presentation" class="main" style="
+                border-collapse: separate;
+                mso-table-lspace: 0pt;
+                mso-table-rspace: 0pt;
+                background: #ffffff;
+                border-radius: 10px;
+                width: 100%;
+                padding: 30px;
+              " width="100%">
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper" style="
+                    font-family: Inter;
+                    font-size: 14px;
+                    vertical-align: top;
+                    box-sizing: border-box;
+                    height: 40rem;
+                  " valign="top">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="
+                      border-collapse: separate;
+                      mso-table-lspace: 0pt;
+                      mso-table-rspace: 0pt;
+                      width: 100%;
+                    " width="100%">
+                    <tr>
+                      <td style="
+                          font-family: Inter;
+                          font-size: 14px;
+                          vertical-align: top;
+                        " valign="top">
+                        <div class="email-body" style="background-color: #ffffff; border-radius: 4px">
+                            <img class="logo" src="https://res.cloudinary.com/dlbjdsad5/image/upload/v1716539889/profileDocument/jm4uyspc845bkxdvwuhi.jpg">
+                          <p style="
+                              font-family: Inter;
+                              color: #000000;
+                              font-size: 22px;
+                              line-height: 20px;
+                              font-weight: 500;
+                              margin: 0;
+                              margin-bottom: 25px;
+                            ">
+                            Dear {{businessName}},
+                          </p>
+                          <p style="
+                              font-family: Inter;
+                              color: #000000;
+                              font-size: 14px;
+                              line-height: 20px;
+                              font-weight: normal;
+                              margin: 0;
+                              margin-bottom: 40px;
+                            ">
+                            Good news! You have received a new payment. Here are the transaction details:
+                          </p>
+                          <p style="
+                              font-family: Inter;
+                              font-size: 14px;
+                              line-height: 20px;
+                              font-weight: normal;
+                              margin: 0;
+                              margin-bottom: 40px;
+                            ">
+                            To get started, we recommend taking a few moments to explore our platform and familiarize yourself with our features. From our intuitive interface to our robust library of assets, we’ve designed our platform to be user-friendly as possible.  
+                          </p>
+                          <ul style="
+                          font-family: Inter;
+                          font-size: 14px;
+                          line-height: 40px;
+                          font-weight: normal;
+                          padding: 0 1rem;
+                          margin-left: 20px;
+                        ">
+                            <li><b>Customer name</b>: {{fullName}}</li>
+                            <li><b>Customer email</b>: {{customerEmail}}</li>
+                            <li><b>Transaction Amount</b>: {{amount}}</li>
+                            <li><b>Coin</b>: {{coin}}</li>
+                            <li><b>Reference</b>: {{transactionId}}</li>
+                            <li><b>Transaction Date</b>: {{transactionDate}}</li>
+                            <li><b>Available Balance</b>: {{availableBalance}}</li>
+                          </ul>
+                          <p style="
+                              font-family: Inter;
+                              font-size: 14px;
+                              line-height: 10px;
+                              font-weight: normal;
+                              margin: 0;
+                              margin-bottom: 20px;
+                            ">
+                            Thank you for choosing Clockpay. We're excited to help you manage your payments seamlessly.
+                          </p>
+                          <p style="
+                              font-family: Inter;
+                              font-size: 14px;
+                              line-height: 20px;
+                              font-weight: normal;
+                              margin: 0;
+                              margin-bottom: 20px;
+                            ">
+                            Thank you for choosing ClockPay. We're excited to serve
+                            you!
+                          </p>
+                          <p style="
+                              font-family: Inter;
+                              font-size: 14px;
+                              line-height: 20px;
+                              font-weight: normal;
+                              margin: 0;
+                            ">
+                            <b>Best Regards,</b><br>
+                            <span style="color: #27AAE1;">Clockpay Team</span>
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              
+​
+              <!-- END MAIN CONTENT AREA -->
+              <tr>
+                <td>
+                    <table style="width: 70%; margin: 60px auto;">
+                        <tr>
+                          <td style="
+                                text-align: center; 
+                                border-top: 1px solid #D9D9D9; 
+                                border-bottom: 1px solid #D9D9D9;
+                                padding: 20px 0px;
+                            ">
+                            <span>
+                                <a href=" https://www.instagram.com/clock_pay?igsh=MTc5OXN4MXlveWpzNQ==" target="_blank" style="color: #ffffff"><img src="https://res.cloudinary.com/dlbjdsad5/image/upload/v1716544381/profileDocument/vnq9cn2h7sfbwnm0yva6.jpg"></a>
+                            </span>
+                            <span>
+                                <a href="https://x.com/Clockpay_?s=09" target="_blank" style="color: #ffffff; margin: 0 10px;"><img src="https://res.cloudinary.com/dlbjdsad5/image/upload/v1717048850/profileDocument/jo919bjm3l4jpgvv0zpr.jpg"></a>
+                            </span>
+                            <span>
+                                <a href="https://www.linkedin.com/company/clockchain" target="_blank" style="color: #ffffff"><img src="https://res.cloudinary.com/dlbjdsad5/image/upload/v1717048790/profileDocument/ot5jv38fqjlgoku7z8li.jpg"></a>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td style="
+                                  text-align: center; 
+                              ">
+                              <p style="text-align: center; font-size: 9px;">© 2024 ClockPay. All rights reserved.</p>
+                              <p style="text-align: center; font-size: 8px;">You are receiving this mail because you registered to join the ClockPay platform. This also shows that you agree to our Terms of use and Privacy Policies. If you no longer want to receive mails from us, click the unsubscribe link below to unsubscribe.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="
+                                  text-align: center;
+                                  font-size: 9px;
+                              ">
+                              <span style="text-decoration: underline;"><a href="">Privacy policy</a></span>
+                              <span class="with-dot" style="text-decoration: underline;"><a href="">Terms of service</a></span>
+                              <span class="with-dot" style="text-decoration: underline;"><a href="">Help center</span>
+                              <span class="with-dot" style="text-decoration: underline;"><a href="">Unsubscribe</a></span>
+                            </td>
+                          </tr>
+                    </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td style="font-family: Inter; font-size: 14px; vertical-align: top" valign="top">
+          &nbsp;
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
